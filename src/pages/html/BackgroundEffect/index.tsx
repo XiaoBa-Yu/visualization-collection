@@ -12,7 +12,7 @@ import textCodeList from "./code";
 import styles from "./index.module.scss";
 
 const { GridBox } = GridContent;
-const gridboxList = new Array(34).fill("1");
+const gridboxList = new Array(40).fill("1");
 
 const BackgroundEffect = () => {
   const intl = useIntl();

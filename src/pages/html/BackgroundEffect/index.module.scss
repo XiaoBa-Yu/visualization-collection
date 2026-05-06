@@ -3,6 +3,7 @@
   width: 100%;
   min-height: 100%;
   display: flex;
+  flex-direction: column;
   background-image: linear-gradient(135deg, #224141, #162a2a);
   padding: 2px 6px 4px;
 
@@ -59,7 +60,8 @@
 
   .bg1 {
     @include bg;
-    background-image: repeating-linear-gradient(
+    background-image:
+      repeating-linear-gradient(
         107deg,
         hsla(82, 0%, 5%, 0.15) 0px,
         hsla(82, 0%, 5%, 0.15) 0px,
@@ -128,7 +130,8 @@
   .bg3 {
     @include bg;
     background-color: #fff;
-    background-image: linear-gradient(rgba(66, 66, 66, 0.5) 50%, transparent 0),
+    background-image:
+      linear-gradient(rgba(66, 66, 66, 0.5) 50%, transparent 0),
       linear-gradient(to right, rgba(66, 66, 66, 0.5) 50%, transparent 0);
     background-size: 50px 50px;
   }
@@ -159,16 +162,22 @@
   .bg6 {
     @include bg;
     background-color: #55f;
-    background-image: linear-gradient(#fff 2px, transparent 0),
+    background-image:
+      linear-gradient(#fff 2px, transparent 0),
       linear-gradient(to right, #fff 2px, transparent 0),
       linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 0),
       linear-gradient(to right, rgba(255, 255, 255, 0.3) 1px, transparent 0);
-    background-size: 60px 60px, 60px 60px, 20px 20px, 20px 20px;
+    background-size:
+      60px 60px,
+      60px 60px,
+      20px 20px,
+      20px 20px;
   }
 
   .bg7 {
     @include bg;
-    background: repeating-linear-gradient(
+    background:
+      repeating-linear-gradient(
         -45deg,
         transparent,
         transparent 25%,
@@ -209,8 +218,9 @@
 
   .bg11 {
     @include bg;
-    background: repeating-radial-gradient(#000 0 0.0001%, #fff 0 0.0002%) 60%
-        60%/1000px 1000px,
+    background:
+      repeating-radial-gradient(#000 0 0.0001%, #fff 0 0.0002%) 60% 60%/1000px
+        1000px,
       repeating-conic-gradient(#000 0 0.0001%, #fff 0 0.0002%) 40% 40%/1000px
         1000px;
     background-blend-mode: difference;
@@ -226,11 +236,8 @@
     @include bg;
     $itemWidth: 60px;
     $signWidth: 5px;
-    background: linear-gradient(
-        90deg,
-        transparent $itemWidth - 1px,
-        #aec8ee 1px
-      ),
+    background:
+      linear-gradient(90deg, transparent $itemWidth - 1px, #aec8ee 1px),
       linear-gradient(180deg, transparent $itemWidth - 1px, #aec8ee 1px),
       conic-gradient(
         from 270deg at $signWidth $signWidth * 4,
@@ -243,9 +250,15 @@
         transparent 0deg
       ),
       #0e284d;
-    background-size: $itemWidth 100%, 100% $itemWidth, $itemWidth $itemWidth,
+    background-size:
+      $itemWidth 100%,
+      100% $itemWidth,
+      $itemWidth $itemWidth,
       $itemWidth $itemWidth;
-    background-position: 0 0, 0 0, calc($signWidth / -2) calc($signWidth * -2),
+    background-position:
+      0 0,
+      0 0,
+      calc($signWidth / -2) calc($signWidth * -2),
       calc($signWidth * -2) calc($signWidth / -2);
   }
 
@@ -253,11 +266,8 @@
     @include bg;
     $itemWidth: 60px;
     $signWidth: 7px;
-    background: linear-gradient(
-        90deg,
-        transparent $itemWidth - 1px,
-        #aec8ee 1px
-      ),
+    background:
+      linear-gradient(90deg, transparent $itemWidth - 1px, #aec8ee 1px),
       linear-gradient(180deg, transparent $itemWidth - 1px, #aec8ee 1px),
       radial-gradient(
         closest-side at $signWidth $signWidth,
@@ -267,8 +277,13 @@
         transparent 100%
       ),
       #0e284d;
-    background-size: $itemWidth 100%, 100% $itemWidth, $itemWidth $itemWidth;
-    background-position: 0 0, 0 0,
+    background-size:
+      $itemWidth 100%,
+      100% $itemWidth,
+      $itemWidth $itemWidth;
+    background-position:
+      0 0,
+      0 0,
       calc($signWidth * -1 - 1px) calc($signWidth * -1 - 1px);
   }
 
@@ -277,7 +292,8 @@
     $itemWidth: 84px;
     $color: #fff;
     $from: from -30deg at;
-    background: linear-gradient(#0000 50%, #0004 0),
+    background:
+      linear-gradient(#0000 50%, #0004 0),
       conic-gradient($from 90%, $color 240deg, #0000 0),
       conic-gradient($from 75%, #71e9a0 240deg, #0000 0),
       conic-gradient($from 25%, #0000 240deg, $color 0),
@@ -288,7 +304,8 @@
   .bg16 {
     @include bg;
     $itemWidth: 70px;
-    background: linear-gradient(-45deg, #0000 75%, #f67280 0),
+    background:
+      linear-gradient(-45deg, #0000 75%, #f67280 0),
       linear-gradient(45deg, #0000 75%, #f67280 0) 0 calc($itemWidth/2) #355c7d;
     background-size: $itemWidth $itemWidth;
   }
@@ -298,9 +315,15 @@
     $itemWidth: 12px;
     $color1: #fdf1cc;
     $color2: #987f69;
-    $g: $color1 3.125%, $color2 0 9.375%, $color1 0 15.625%, $color2 0 21.875%,
-      $color1 0 28.125%, #0000 0;
-    background: linear-gradient(
+    $g:
+      $color1 3.125%,
+      $color2 0 9.375%,
+      $color1 0 15.625%,
+      $color2 0 21.875%,
+      $color1 0 28.125%,
+      #0000 0;
+    background:
+      linear-gradient(
           225deg,
           #0000 3.125%,
           $color2 0 9.375%,
@@ -323,7 +346,8 @@
 
   .bg18 {
     @include bg;
-    background: repeating-linear-gradient(
+    background:
+      repeating-linear-gradient(
         60deg,
         rgba(255, 255, 255, 0.2) 0,
         rgba(255, 255, 255, 0.2) 2px,
@@ -361,7 +385,8 @@
 
   .bg19 {
     @include bg;
-    background: repeating-linear-gradient(
+    background:
+      repeating-linear-gradient(
         0deg,
         rgba(255, 255, 255, 0.5) 0,
         rgba(255, 255, 255, 0.2) 2px,
@@ -401,7 +426,8 @@
 
   .bg20 {
     @include bg;
-    background: repeating-linear-gradient(
+    background:
+      repeating-linear-gradient(
         -1deg,
         rgba(0, 0, 0, 0.1) 0,
         rgba(0, 0, 0, 0.1) 1px,
@@ -451,7 +477,8 @@
 
   .bg21 {
     @include bg;
-    background: repeating-linear-gradient(
+    background:
+      repeating-linear-gradient(
         -1deg,
         rgba(0, 0, 0, 0.1) 0,
         rgba(0, 0, 0, 0.1) 1px,
@@ -494,7 +521,8 @@
 
   .bg22 {
     @include bg;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         circle farthest-side at 50% 50%,
         hsl(60, 15%, 15%) 0,
         hsl(60, 15%, 15%) 15%,
@@ -542,14 +570,26 @@
         hsl(65, 30%, 20%) 90%,
         hsl(60, 40%, 15%) 100%
       );
-    background-size: 40px 40px, 40px 40px, 40px 40px, 40px 40px, 100% 100%,
+    background-size:
+      40px 40px,
+      40px 40px,
+      40px 40px,
+      40px 40px,
+      100% 100%,
       100% 100%;
-    background-position: 0 0, 20px 20px, 0 -2px, 20px 22px, 0 0, 0 0;
+    background-position:
+      0 0,
+      20px 20px,
+      0 -2px,
+      20px 22px,
+      0 0,
+      0 0;
   }
 
   .bg23 {
     @include bg;
-    background: linear-gradient(
+    background:
+      linear-gradient(
         120deg,
         hsla(0, 80%, 20%, 0.5) 0%,
         hsla(5, 100%, 30%, 0.5) 15%,
@@ -584,7 +624,8 @@
 
   .bg24 {
     @include bg;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         ellipse 150% 150% at 80% 80%,
         transparent 40%,
         rgba(255, 255, 255, 0.25) 60%,
@@ -636,13 +677,19 @@
   .bg25 {
     @include bg;
     $size: 100px;
-    $g: #0000 52%, #170409 54% 57%, #0000 59%;
-    background: radial-gradient(farthest-side at -33.33% 50%, $g) 0
-        calc($size/2),
+    $g:
+      #0000 52%,
+      #170409 54% 57%,
+      #0000 59%;
+    background:
+      radial-gradient(farthest-side at -33.33% 50%, $g) 0 calc($size/2),
       radial-gradient(farthest-side at 50% 133.33%, $g) calc($size/2) 0,
       radial-gradient(farthest-side at 133.33% 50%, $g),
-      radial-gradient(farthest-side at 50% -33.33%, $g), #67917a;
-    background-size: calc($size/4.667) $size, $size calc($size/4.667);
+      radial-gradient(farthest-side at 50% -33.33%, $g),
+      #67917a;
+    background-size:
+      calc($size/4.667) $size,
+      $size calc($size/4.667);
   }
 
   .bg26 {
@@ -651,11 +698,8 @@
     $g: 15px;
     $color1: #c02942;
     $color2: #53777a;
-    background: conic-gradient(
-          at $size calc(100% - $size),
-          #0000 270deg,
-          $color1 0
-        )
+    background:
+      conic-gradient(at $size calc(100% - $size), #0000 270deg, $color1 0)
         calc($size + $g) 0,
       linear-gradient($color2 $size, #0000 0) 0 $g,
       conic-gradient(
@@ -671,14 +715,20 @@
   .bg27 {
     @include bg;
     $size: 40px;
-    $color1: #72e21f 25%, #0000 0;
+    $color1:
+      #72e21f 25%,
+      #0000 0;
     $color2: #044012;
     $g1: conic-gradient(at 62.5% 12.5%, $color1);
     $g2: conic-gradient(at 87.5% 62.5%, $color1);
     $g3: conic-gradient(at 25% 12.5%, $color1);
-    background: $g1 calc($size/-8) calc($size/2),
-      $g1 calc(-3 * $size/8) calc($size/4), $g2 calc(3 * $size/8) calc($size/4),
-      $g2 calc($size/-8) 0, $g3 0 calc($size/-4), $g3 calc($size/-4) 0,
+    background:
+      $g1 calc($size/-8) calc($size/2),
+      $g1 calc(-3 * $size/8) calc($size/4),
+      $g2 calc(3 * $size/8) calc($size/4),
+      $g2 calc($size/-8) 0,
+      $g3 0 calc($size/-4),
+      $g3 calc($size/-4) 0,
       conic-gradient(at 87.5% 87.5%, $color1) calc($size/8) 0 $color2;
     background-size: $size $size;
   }
@@ -686,8 +736,12 @@
   .bg28 {
     @include bg;
     $size: 20px;
-    $g: #0000 83%, #b09f79 85% 99%, #0000 101%;
-    background: radial-gradient(27% 29% at right, $g) calc($size / 2) $size,
+    $g:
+      #0000 83%,
+      #b09f79 85% 99%,
+      #0000 101%;
+    background:
+      radial-gradient(27% 29% at right, $g) calc($size / 2) $size,
       radial-gradient(27% 29% at left, $g) calc($size / -2) $size,
       radial-gradient(29% 27% at top, $g) 0 calc($size / 2),
       radial-gradient(29% 27% at bottom, $g) 0 calc($size / -2) #476074;
@@ -700,11 +754,14 @@
     $b: 3;
     $color1: #615375;
     $color2: #8eb2c5;
-    $g: #0000 calc(100% - $size / $b - 1px),
-      $color1 calc(100% - $size / $b) calc(100% - 1px), #0000;
+    $g:
+      #0000 calc(100% - $size / $b - 1px),
+      $color1 calc(100% - $size / $b) calc(100% - 1px),
+      #0000;
     $r: calc(2.414 * $size);
     $p: calc(1.414 * $size);
-    background: radial-gradient($r at 0 0, $g) $r $r,
+    background:
+      radial-gradient($r at 0 0, $g) $r $r,
       radial-gradient($size at 0 0, $g) $p $p,
       radial-gradient($r at 0 100%, $g) 0 $p,
       radial-gradient($size at 0 100%, $g) calc(-1 * $size) $r,
@@ -723,7 +780,8 @@
 
   .bg31 {
     @include bg;
-    background: linear-gradient(
+    background:
+      linear-gradient(
         45deg,
         transparent 33.33%,
         rgba(57, 144, 179, 0.1) 33.33%,
@@ -753,5 +811,251 @@
       #f5c7a1 95%
     );
     background-size: 50px 50px;
+  }
+
+  .bg35 {
+    @include bg;
+    background-color: #2c3e50;
+    background-image:
+      radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.1) 10%,
+        transparent 11%
+      ),
+      radial-gradient(
+        circle at 30% 50%,
+        rgba(255, 255, 255, 0.1) 10%,
+        transparent 11%
+      ),
+      radial-gradient(
+        circle at 70% 50%,
+        rgba(255, 255, 255, 0.1) 10%,
+        transparent 11%
+      );
+    background-size: 40px 20px;
+  }
+
+  .bg36 {
+    @include bg;
+    background-color: #f5f0e6; /* 宣纸底色 */
+
+    /* 绘制竹节和竹叶 */
+    background-image: 
+      /* 竹竿1 - 左侧 */
+      linear-gradient(
+        90deg,
+        transparent 20%,
+        #3a342c 20%,
+        #3a342c 23%,
+        transparent 23%,
+        transparent 28%,
+        #3a342c 28%,
+        #3a342c 31%,
+        transparent 31%
+      ),
+      /* 竹节纹理 - 水平节 */
+      linear-gradient(
+          0deg,
+          transparent 45%,
+          #3a342c 45%,
+          #3a342c 48%,
+          transparent 48%
+        ),
+      /* 竹叶1 - 三角形 */
+      linear-gradient(
+          135deg,
+          transparent 45%,
+          #2d5a27 45%,
+          #2d5a27 50%,
+          transparent 50%
+        ),
+      /* 竹叶2 */
+      linear-gradient(
+          45deg,
+          transparent 60%,
+          #2d5a27 60%,
+          #2d5a27 65%,
+          transparent 65%
+        );
+
+    /* 控制位置和大小：模拟自然的分布 */
+    background-size:
+      8px 200px,
+      /* 竹竿粗细和高度 */ 40px 60px,
+      /* 竹节宽度和高度 */ 30px 30px,
+      /* 竹叶大小 */ 25px 25px;
+
+    /* 平铺位置 */
+    background-position:
+      20% 20%,
+      /* 第一根竹子位置 */ 20% 20%,
+      /* 竹节位置 */ 18% 18%,
+      /* 竹叶位置 */ 22% 15%;
+
+    background-repeat: repeat; /* 允许平铺 */
+  }
+
+  .bg37 {
+    @include bg;
+    background-color: #3a6ea5; /* 青花蓝底 */
+    background-image:
+      linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%);
+
+    /* 控制裂纹网格的大小 */
+    background-size: 20px 20px;
+    background-position:
+      0 0,
+      0 10px,
+      10px -10px,
+      -10px 0px;
+  }
+
+  .bg38 {
+    @include bg;
+    background: 
+    /* 漆器底色 */
+      radial-gradient(circle at 30% 30%, #1a0a00 0%, #0a0500 70%),
+      /* 金粉/贝壳闪烁点 */
+      repeating-radial-gradient(
+          circle at 20% 40%,
+          rgba(255, 215, 0, 0.3) 0,
+          rgba(255, 215, 0, 0.3) 2px,
+          transparent 2px,
+          transparent 8px
+        ),
+      repeating-radial-gradient(
+        circle at 70% 60%,
+        rgba(255, 255, 255, 0.2) 0,
+        rgba(255, 255, 255, 0.2) 1px,
+        transparent 1px,
+        transparent 6px
+      );
+
+    /* 混合模式增强金属感 */
+    background-blend-mode: overlay, screen, screen;
+    background-size:
+      100% 100%,
+      100px 100px,
+      75px 75px;
+  }
+
+  .bg39 {
+    @include bg;
+    position: relative;
+    background: 
+    /* 远山：模糊淡墨 */
+      radial-gradient(
+        ellipse at 20% 80%,
+        rgba(40, 40, 40, 0.3) 0%,
+        rgba(60, 60, 60, 0.1) 20%,
+        transparent 50%
+      ),
+      /* 中景：中等浓度 */
+      radial-gradient(
+          ellipse at 50% 60%,
+          rgba(30, 30, 30, 0.5) 0%,
+          rgba(50, 50, 50, 0.2) 25%,
+          transparent 60%
+        ),
+      /* 近景：浓墨 */
+      radial-gradient(
+          ellipse at 80% 40%,
+          rgba(10, 10, 10, 0.7) 0%,
+          rgba(30, 30, 30, 0.3) 30%,
+          transparent 70%
+        ),
+      /* 宣纸纹理 */
+      linear-gradient(
+          45deg,
+          rgba(245, 240, 230, 0.8) 25%,
+          transparent 25%,
+          transparent 75%,
+          rgba(245, 240, 230, 0.8) 75%
+        );
+
+    background-size:
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      8px 8px;
+    background-blend-mode: multiply, multiply, multiply, normal;
+
+    /* 添加水墨笔触纹理 */
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image:
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          rgba(0, 0, 0, 0.02) 1px,
+          transparent 2px,
+          transparent 4px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          rgba(0, 0, 0, 0.02) 1px,
+          transparent 2px,
+          transparent 4px
+        );
+      mix-blend-mode: multiply;
+      opacity: 0.3;
+    }
+  }
+
+  .bg40 {
+    @include bg;
+    background-color: #150a00;
+    position: relative;
+    overflow: hidden;
+
+    /* 基础金线网格 */
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 24px,
+        rgba(212, 175, 55, 0.3) 24px,
+        rgba(212, 175, 55, 0.3) 25px,
+        transparent 25px,
+        transparent 50px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent 0,
+        transparent 24px,
+        rgba(212, 175, 55, 0.3) 24px,
+        rgba(212, 175, 55, 0.3) 25px,
+        transparent 25px,
+        transparent 50px
+      );
+
+    background-size: 100px 100px;
+
+    /* 流光层 */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 223, 0, 0.2) 25%,
+        rgba(255, 223, 0, 0.4) 50%,
+        rgba(255, 223, 0, 0.2) 75%,
+        transparent 100%
+      );
+      background-size: 200% 100%;
+      mix-blend-mode: screen;
+    }
   }
 }

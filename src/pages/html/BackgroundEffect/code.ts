@@ -598,6 +598,213 @@ const textCodeList = [
     );
     background-size: 50px 50px;
   }`,
+  `.box {
+    background-color: #2c3e50;
+    background-image:
+      radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.1) 10%,
+        transparent 11%
+      ),
+      radial-gradient(
+        circle at 30% 50%,
+        rgba(255, 255, 255, 0.1) 10%,
+        transparent 11%
+      ),
+      radial-gradient(
+        circle at 70% 50%,
+        rgba(255, 255, 255, 0.1) 10%,
+        transparent 11%
+      );
+    background-size: 40px 20px;
+  }`,
+  `.box {
+    background-color: #f5f0e6; /* 宣纸底色 */
+    background-image:
+      linear-gradient(
+        90deg,
+        transparent 20%,
+        #3a342c 20%,
+        #3a342c 23%,
+        transparent 23%,
+        transparent 28%,
+        #3a342c 28%,
+        #3a342c 31%,
+        transparent 31%
+      ),
+      linear-gradient(
+          0deg,
+          transparent 45%,
+          #3a342c 45%,
+          #3a342c 48%,
+          transparent 48%
+        ),
+      linear-gradient(
+          135deg,
+          transparent 45%,
+          #2d5a27 45%,
+          #2d5a27 50%,
+          transparent 50%
+        ),
+      linear-gradient(
+          45deg,
+          transparent 60%,
+          #2d5a27 60%,
+          #2d5a27 65%,
+          transparent 65%
+        );
+    background-size:
+      8px 200px,
+      40px 60px,
+      30px 30px,
+      25px 25px;
+    background-position:
+      20% 20%, 
+      20% 20%,
+      18% 18%,
+      22% 15%;
+    background-repeat: repeat;
+  }`,
+  `.box {
+    background-color: #3a6ea5;
+    background-image:
+      linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%);
+    background-size: 20px 20px;
+    background-position:
+      0 0,
+      0 10px,
+      10px -10px,
+      -10px 0px;
+  }`,
+  `.box {
+    background:
+      radial-gradient(circle at 30% 30%, #1a0a00 0%, #0a0500 70%),
+      repeating-radial-gradient(
+          circle at 20% 40%,
+          rgba(255, 215, 0, 0.3) 0,
+          rgba(255, 215, 0, 0.3) 2px,
+          transparent 2px,
+          transparent 8px
+        ),
+      repeating-radial-gradient(
+        circle at 70% 60%,
+        rgba(255, 255, 255, 0.2) 0,
+        rgba(255, 255, 255, 0.2) 1px,
+        transparent 1px,
+        transparent 6px
+      );
+    background-blend-mode: overlay, screen, screen;
+    background-size:
+      100% 100%,
+      100px 100px,
+      75px 75px;
+  }`,
+  `.box {
+    position: relative;
+    background: 
+      radial-gradient(
+        ellipse at 20% 80%,
+        rgba(40, 40, 40, 0.3) 0%,
+        rgba(60, 60, 60, 0.1) 20%,
+        transparent 50%
+      ),
+      radial-gradient(
+          ellipse at 50% 60%,
+          rgba(30, 30, 30, 0.5) 0%,
+          rgba(50, 50, 50, 0.2) 25%,
+          transparent 60%
+        ),
+      radial-gradient(
+          ellipse at 80% 40%,
+          rgba(10, 10, 10, 0.7) 0%,
+          rgba(30, 30, 30, 0.3) 30%,
+          transparent 70%
+        ),
+      linear-gradient(
+          45deg,
+          rgba(245, 240, 230, 0.8) 25%,
+          transparent 25%,
+          transparent 75%,
+          rgba(245, 240, 230, 0.8) 75%
+        );
+    background-size:
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      8px 8px;
+    background-blend-mode: multiply, multiply, multiply, normal;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image:
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          rgba(0, 0, 0, 0.02) 1px,
+          transparent 2px,
+          transparent 4px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          rgba(0, 0, 0, 0.02) 1px,
+          transparent 2px,
+          transparent 4px
+        );
+      mix-blend-mode: multiply;
+      opacity: 0.3;
+    }
+  }`,
+  `.box {
+    background-color: #150a00;
+    position: relative;
+    overflow: hidden;
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 24px,
+        rgba(212, 175, 55, 0.3) 24px,
+        rgba(212, 175, 55, 0.3) 25px,
+        transparent 25px,
+        transparent 50px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent 0,
+        transparent 24px,
+        rgba(212, 175, 55, 0.3) 24px,
+        rgba(212, 175, 55, 0.3) 25px,
+        transparent 25px,
+        transparent 50px
+      );
+    background-size: 100px 100px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 223, 0, 0.2) 25%,
+        rgba(255, 223, 0, 0.4) 50%,
+        rgba(255, 223, 0, 0.2) 75%,
+        transparent 100%
+      );
+      background-size: 200% 100%;
+      mix-blend-mode: screen;
+    }
+  }`,
 ];
 
 export default textCodeList;
